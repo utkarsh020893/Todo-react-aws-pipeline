@@ -1,0 +1,32 @@
+version: 0.2
+
+proxy:
+  upload-artifacts: no | yes
+  logs: no | yes
+
+batch:
+  fast-fail: false | true
+  # build-list:
+  # build-matrix:
+  # build-graph:
+        
+phases:
+  install:
+    runtime-versions:
+      java: openjdk8
+    commands:
+      - echo install
+  pre_build:
+    commands:
+      - echo pre_build
+  build:
+    commands:
+      - mvn package
+      - echo build
+  post_build:
+    commands:
+      - echo post_build
+      
+artifacts:
+  files:
+    - target/Todo-react-continuous-delivery-pipeline-0.0.1-SNAPSHOT.jar
