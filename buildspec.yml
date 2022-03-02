@@ -1,15 +1,5 @@
 version: 0.2
 
-proxy:
-  upload-artifacts: no | yes
-  logs: no | yes
-
-batch:
-  fast-fail: false | true
-  # build-list:
-  # build-matrix:
-  # build-graph:
-        
 phases:
   install:
     runtime-versions:
